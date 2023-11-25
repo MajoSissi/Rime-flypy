@@ -1,8 +1,5 @@
-customization:
-  distribution_code_name: Weasel
-  distribution_version: 0.15.0.0
-  generator: "Weasel::UIStyleSettings"
-  modified_time: "Sat Nov 25 14:43:59 2023"
-  rime_version: 1.8.5
 patch:
   "style/color_scheme": ink
+  "style/line_spacing": 4
+  "style/spacing": 8
+  "style/horizontal": true
