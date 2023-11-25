@@ -22,7 +22,8 @@ patch:
     - {accept: apostrophe, send: 3, when: has_menu}
     - {accept: "Control+a", send: Home, when: composing}
     - {accept: "Control+e", send: End, when: composing}
-    - {accept: "Control+Shift+4", toggle: simplification, when: always}
+    - { when: composing, accept: Control+h, send: Left}
+    - { when: composing, accept: Control+l, send: Right}
   "menu/page_size": 5
   schema_list:
     - {schema: flypy}
