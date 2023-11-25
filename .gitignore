@@ -1,0 +1,9 @@
+/*.userdb
+
+/build/*
+!/build/flypydz.table.bin
+!/build/flypy.prism.bin
+!/build/flypy.reverse.bin
+!/build/flypy.table.bin
+!/build/flypydz.prism.bin
+!/build/flypydz.reverse.bin
