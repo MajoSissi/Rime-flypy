@@ -1,5 +1,12 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.15.0.0
+  generator: "Weasel::UIStyleSettings"
+  modified_time: "Sat Nov 25 16:54:09 2023"
+  rime_version: 1.8.5
 patch:
-  "style/color_scheme": ink
-  "style/line_spacing": 4
-  "style/spacing": 8
-  "style/horizontal": true
+  style/color_scheme: lost_temple
+  style/display_tray_icon: false
+  style/horizontal: true
+  style/line_spacing: 4
+  style/spacing: 8

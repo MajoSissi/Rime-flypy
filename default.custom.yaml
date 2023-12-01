@@ -18,8 +18,8 @@ patch:
     - { when: composing, accept: 'Control+e', send: End }
     - { when: composing, accept: Control+h, send: Left }
     - { when: composing, accept: Control+l, send: Right }
-  'menu/page_size': 5
   schema_list:
     - { schema: flypy }
     - { schema: flypy_double }
     - { schema: numbers }
+  'menu/page_size': 5

@@ -54,7 +54,7 @@ engine:
     - uniquifier
 
 speller:
-  alphabet: zyxwvutsrqponmlkjihgfedcba
+  alphabet: zyxwvutsrqponmlkjihgfedcbaV
   delimiter: " '"
   algebra:
     - erase/^xx$/
@@ -91,7 +91,7 @@ speller:
 
 translator:
   dictionary: luna_pinyin
-  prism: double_pinyin_flypy
+  prism: flypy_double
   preedit_format:
     - xform/([bpmfdtnljqx])n/$1iao/
     - xform/(\w)g/$1eng/

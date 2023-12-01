@@ -14,7 +14,7 @@
 # 此分类文件名为“flypy_full.txt”，部署后生效
 # 例：quts 1.趋同  2.去
 # 如无候选2则表示没有生效
-# no comment
+# no commen
 
 玤	bhwf
 缈	mnsu

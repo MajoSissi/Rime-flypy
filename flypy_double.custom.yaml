@@ -1,19 +1,21 @@
 patch:
   schema/name: 小鹤双拼
   switches:
-    - name: ascii_mode
+    - name: ascii_punct
+      states: [。，, ．，]
       reset: 0
-      states: [ 中文, 西文 ]
+    - name: simplification
+      states: [繁, 简]
+      reset: 1
     - name: emoji_suggestion
       reset: 1
-      states: [ "No", "Yes" ]
+      states: [ "N", "Y" ]
     - name: full_shape
-      states: [ 半角, 全角 ]
-    - name: simplification
-      reset: 1
-      states: [ 漢字, 汉字 ]
-    - name: ascii_punct
-      states: [ 。，, ．， ]
+      states: [半, 全]
+      reset: 0
+    - name: ascii_mode
+      reset: 0
+      states: [中, 英]
   engine/translators:
     # - lua_translator@date_translator
     # - lua_translator@week_translator
@@ -59,25 +61,22 @@ patch:
       "/ss": [💪,👈,👉,👆,👇,✋,👌,👍,👎,✊,👊,👋,👏,👐]
     half_shape:
       "#": "#"
+      "@": "@"
+      "$": ["¥", "$", "€", "£", "¢", "¤"]
       "*": "*"
       "`": "`"
       "~": "~"
-      "@": "@"
       "=": "="
       '\': "、"
       "%": "%"
-      "$": ["¥", "$", "€", "£", "¢", "¤"]
-      "|": ["|", "｜", "·", "・", "§", "¦", "‖", "︴"]
-      "/": ["/", "÷"]
-      "'": { pair: ["「", "」"] }
-      "[": ["【", "〔", "［"]
-      "]": ["】", "〕", "］"]
+      "|": "\\"
+      "/": "/"
+      "[": "【"
+      "]": "】"
       "<": "《"
       ">": "》"
 
   recognizer/patterns/punct: "^/([0-9]0?|[A-Za-z]+)$"
-
-    
 
   ### 双拼使用自定义词典 custom_phrase.txt
   custom_phrase:
@@ -88,6 +87,7 @@ patch:
     enable_sentence: false
     initial_quality: 1
   "engine/translators/@5": table_translator@custom_phrase
+
 
 # Rx: BlindingDark/rime-easy-en:customize:schema=double_pinyin_flypy
   # __include: easy_en:/patch

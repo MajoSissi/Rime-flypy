@@ -15,16 +15,15 @@ punctuator:
 
 switches:
   - name: ascii_mode
-    # states: [ 中, 英 ]
     reset: 0
+   # states: [ 中文, 英文 ]
   - name: full_shape
-    states: [ 半, 全 ]
-    reset: 0
+   # states: [ 半角, 全角 ]
   - name: simplification
-    states: [ 简, 繁 ]
+   # states: [ 简, 繁 ]
     reset: 0
   - name: ascii_punct
-    states: [ 。，, ．， ]
+   # states: [ 。，, ．， ]
     reset: 0
 
 engine:
@@ -46,13 +45,14 @@ engine:
   translators:
     - punct_translator
     - table_translator
+    - lua_translator@date_translator
+    - lua_translator@time_translator
     - table_translator@custom_phraseVD
     - table_translator@custom_phraseXT
     - table_translator@custom_phraseYH
     - table_translator@custom_phraseQMZ
     - reverse_lookup_translator
     - history_translator@history
-    - lua_translator@date_translator
     - lua_translator@calculator_translator
   filters:
     - simplifier
@@ -60,8 +60,9 @@ engine:
     - uniquifier
 
 speller:
-  alphabet: "abcdefghijklmnopqrstuvwxyz;'"
-  initials: ';abcdefghijklmnopqrstuvwxyz'
+  alphabet: abcdefghijklmnopqrstuvwxyz'
+  # alphabet: "abcdefghijklmnopqrstuvwxyz;'"
+  initials: ;abcdefghijklmnopqrstuvwxyz
   finals: "'"
   #delimiter: " '"
   max_code_length: 4
@@ -159,5 +160,5 @@ menu:
   page_size: 5 #候选项数
   
 style:
-  horizontal: false #竖排为false
+  horizontal: true #竖排为false
   

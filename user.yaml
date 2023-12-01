@@ -1,9 +1,12 @@
 var:
-  last_build_time: 1700900103
+  last_build_time: 1701265474
   option:
+    ascii_punct: true
+    full_shape: false
     simplification: false
   previously_selected_schema: flypy
   schema_access_time:
     double_pinyin_flypy: 1700892781
-    flypy: 1700894597
-    numbers: 1700893370
+    flypy: 1701264368
+    flypy_double: 1701256859
+    numbers: 1700923729
