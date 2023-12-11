@@ -1,12 +1,6 @@
 var:
-  last_build_time: 1701265474
-  option:
-    ascii_punct: true
-    full_shape: false
-    simplification: false
-  previously_selected_schema: flypy
+  last_build_time: 1702297794
+  previously_selected_schema: double_pinyin_flypy
   schema_access_time:
-    double_pinyin_flypy: 1700892781
-    flypy: 1701264368
-    flypy_double: 1701256859
-    numbers: 1700923729
+    double_pinyin_flypy: 1702296159
+    rime_ice: 1702296155
