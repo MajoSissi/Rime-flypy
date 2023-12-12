@@ -1,14 +1,10 @@
 patch:
   # 辅码
   engine/filters/+:
-    - lua_filter@*aux_code@flypy_full
+    - lua_filter@aux_code@aux_code/flypy_full
   speller/alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
   key_binder/+:
     aux_code_trigger: "`"
-
-  # speller/alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA.
-  # key_binder/+:
-    # aux_code_trigger: "."
 
   # （按需选择）清空 preedit_format 中的内容，输入时显示双拼编码
   translator/preedit_format: []

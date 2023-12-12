@@ -2,7 +2,6 @@
 -- 文档 https://github.com/hchunhui/librime-lua/wiki/Scripting
 
 
-
 -- processors:
 
 -- 以词定字，可在 default.yaml → key_binder 下配置快捷键，默认为左右中括号 [ ]
@@ -64,10 +63,6 @@ cn_en_spacer = require("cn_en_spacer")
 -- 在 engine/filters 增加 - lua_filter@en_spacer
 en_spacer = require("en_spacer")
 
--- 九宫格，将输入框的数字转为对应的拼音或英文，iRime 用，Hamster 不需要。
--- 在 engine/filters 增加 - lua_filter@t9_preedit
-t9_preedit = require("t9_preedit")
-
 -- 根据是否在用户词典，在 comment 上加上一个星号 *
 -- 在 engine/filters 增加 - lua_filter@is_in_user_dict
 -- 在方案里写配置项：
@@ -83,3 +78,6 @@ is_in_user_dict = require("is_in_user_dict")
 -- drop_cand: "Control+d"       # 强制删词, 无视输入的编码
 cold_word_drop_processor = require("cold_word_drop.processor")
 cold_word_drop_filter = require("cold_word_drop.filter")
+
+-- 挂接小鹤音形辅码
+aux_code = require("aux_code.aux_code")
