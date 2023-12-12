@@ -8,5 +8,4 @@ https://github.com/iDvel/rime-ice
 
 https://github.com/HowcanoeWang/rime-lua-aux-code
 
-* /lua/aux_code.lua
-* /lua/flypy_full.txt
+* /lua/aux_code
