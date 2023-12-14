@@ -11,6 +11,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Update Version
+        run: |
+          echo $[$(cat .ver)+1] > .ver
+
       - name: Update rime-ice dicts
         run: |
           wget -O rime-ice.zip https://github.com/iDvel/rime-ice/archive/refs/heads/main.zip
@@ -37,7 +41,3 @@ jobs:
           git remote rm origin
           git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
           git push -f -u origin main
-
-      - name: Update Version
-        run: |
-          echo $[$(cat .ver)+1] > .ver
