@@ -14,7 +14,7 @@ jobs:
 
       - name: demo
         run: |
-          touch _demo
+          mkdir 123
 
       - name: Push
         run: |
