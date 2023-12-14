@@ -13,4 +13,4 @@ jobs:
 
       - name: demo
         run: |
-          echo user.name
+          echo "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
