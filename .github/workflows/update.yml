@@ -15,6 +15,7 @@ jobs:
       - name: demo
         run: |
           mkdir 123
+          ls
 
       - name: Push
         run: |
