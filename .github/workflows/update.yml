@@ -12,17 +12,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: demo
-        run: |
-          mkdir 123
-          ls
-
       - name: Push
         run: |
           git init
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b dev
+
+          mkdir 123
+          ls
+
           git add .
           git commit -m "Update"
           git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
