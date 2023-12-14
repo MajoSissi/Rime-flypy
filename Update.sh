@@ -20,4 +20,3 @@ done
 rm -rf rime-ice-main rime-ice.zip
 
 echo "[Info] Update Completed!"
-sleep 10
