@@ -1,2 +1,8 @@
+Develop: &dev
+  ascii_mode: true
 patch:
   "style/color_scheme": dark_temple
+  app_options: 
+    sublime_text.exe: *dev
+    code.exe: *dev
+    windowsterminal.exe: *dev
