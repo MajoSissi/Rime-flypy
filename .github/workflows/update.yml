@@ -1,8 +1,6 @@
 name: Update
 
 on:
-  watch:
-    types: started
   schedule:
     - cron: 0 0 * * 0
 
@@ -30,8 +28,6 @@ jobs:
           cp -rf ./rime-lua-aux-code-main/lua/flypy_full.txt ./lua/aux_code
           rm -rf rime-lua-aux-code-main aux-code.zip
 
-          touch 1
-
       - name: Push
         run: |
           git config --local user.name "github-actions[bot]"
@@ -41,3 +37,7 @@ jobs:
           git remote rm origin
           git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
           git push -f -u origin main
+
+      - name: Update Version
+        run: |
+          echo $[$(cat .ver)+1] > .ver
