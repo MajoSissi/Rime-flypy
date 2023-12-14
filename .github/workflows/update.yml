@@ -12,10 +12,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: dmeo
-        run: |
-          ls -a
-
       - name: Push
         run: |
           git init
@@ -28,4 +24,4 @@ jobs:
           git add .
           git commit -m "Update"
           git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
-          git push -f -u origin dev
+          git push -f -u origin main
