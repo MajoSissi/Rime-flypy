@@ -1,9 +1,10 @@
 name: Update
 
 on:
-  push:
-    branches:
-      - main
+  watch:
+    types: started
+  schedule:
+    - cron: 0 0 * * 0
 
 jobs:
   build:
@@ -15,16 +16,21 @@ jobs:
       - name: Update rime-ice dicts
         run: |
           wget -O rime-ice.zip https://github.com/iDvel/rime-ice/archive/refs/heads/main.zip
-
           unzip rime-ice.zip
-
-          files=(cn_dicts en_dicts opencc)
-          for item in "${files[@]}"
-          do
-              cp -rf ./rime-ice-main/$item .
-          done
-
+          cp -rf ./rime-ice-main/cn_dicts .
+          cp -rf ./rime-ice-main/en_dicts .
+          cp -rf ./rime-ice-main/opencc .
           rm -rf rime-ice-main rime-ice.zip
+
+      - name: Update rime-lua-aux-code
+        run: |
+          wget -O aux-code.zip https://github.com/HowcanoeWang/rime-lua-aux-code/archive/refs/heads/main.zip
+          unzip aux-code.zip
+          cp -rf ./rime-lua-aux-code-main/lua/aux_code.lua ./lua/aux_code
+          cp -rf ./rime-lua-aux-code-main/lua/flypy_full.txt ./lua/aux_code
+          rm -rf rime-lua-aux-code-main aux-code.zip
+
+          touch 1
 
       - name: Push
         run: |
