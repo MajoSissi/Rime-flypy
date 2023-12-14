@@ -16,8 +16,6 @@ jobs:
         run: |
           touch 123
 
-          cat .git/config
-
       - name: Commit & Push changes
         uses: Andro999b/push@v1.3
         with:
