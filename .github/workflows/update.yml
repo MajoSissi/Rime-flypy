@@ -32,4 +32,4 @@ jobs:
           git commit -m "d"
           git remote rm origin
           git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
-          git push -u origin main
+          git push
