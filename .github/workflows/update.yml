@@ -12,13 +12,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: dmeo
+        run: |
+          touch 123
+
       - name: Push
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          touch 123
-
           git add .
           git commit -m "Update"
           git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
