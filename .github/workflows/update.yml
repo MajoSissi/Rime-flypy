@@ -14,15 +14,7 @@ jobs:
 
       - name: Update rime-ice dicts
         run: |
-          wget -O rime-ice.zip https://github.com/iDvel/rime-ice/archive/refs/heads/main.zip
-          unzip rime-ice.zip
-          files=(cn_dicts en_dicts opencc)
-          for item in "${files[@]}"
-          do
-              cp -rf ./rime-ice-main/$item .
-          done
-          rm -rf rime-ice-main rime-ice.zip
-          echo "[Info] Update Completed!"
+          touch 1
 
       - name: Push
         run: |
