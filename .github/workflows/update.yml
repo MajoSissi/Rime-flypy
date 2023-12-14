@@ -16,15 +16,16 @@ jobs:
         run: |
           touch 123
 
-      - name: Commit & Push changes
-        uses: Andro999b/push@v1.3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Commit & Push changes
+      #   uses: Andro999b/push@v1.3
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      # - name: Push
-      #   run: |
-      #     git config --local user.name "github-actions[bot]"
-      #     git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-      #     git add .
-      #     git commit -m "Update"
-      #     git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+      - name: Push
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Update"
+          git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+          git push
