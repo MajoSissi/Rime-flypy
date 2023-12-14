@@ -17,13 +17,15 @@ jobs:
           mkdir 123
           ls
 
-      - name: Commit files
+      - name: Push
         run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          cd sing-rule || exit 1
+          ls
+          git init
           git config --local user.name "github-actions[bot]"
-          git commit -a -m "Add changes"
-
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b dev
+          git add .
+          git commit -m "Update"
+          git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+          git push -f -u origin dev
