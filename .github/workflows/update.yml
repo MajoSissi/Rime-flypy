@@ -14,7 +14,17 @@ jobs:
 
       - name: Update rime-ice dicts
         run: |
-          touch 1
+          wget -O rime-ice.zip https://github.com/iDvel/rime-ice/archive/refs/heads/main.zip
+
+          unzip rime-ice.zip
+
+          files=(cn_dicts en_dicts opencc)
+          for item in "${files[@]}"
+          do
+              cp -rf ./rime-ice-main/$item .
+          done
+
+          rm -rf rime-ice-main rime-ice.zip
 
       - name: Push
         run: |
@@ -24,4 +34,4 @@ jobs:
           git commit -m "d"
           git remote rm origin
           git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
-          git push
+          git push -f -u origin main
