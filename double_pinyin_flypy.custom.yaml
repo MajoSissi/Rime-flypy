@@ -7,10 +7,5 @@ patch:
     aux_code_trigger: "`"
 
 
-  # 反查：两分 | 定义触发键
-  liangfen/prefix: "U"
-  recognizer/patterns/reverse_lookup: "^U[a-z]+$"
-
-
   # 输入时显示双拼编码
   translator/preedit_format: []

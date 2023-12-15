@@ -20,16 +20,11 @@ unicode = require("unicode")
 -- 数字、人民币大写，R 开头
 number_translator = require("number_translator")
 
-
-
 -- filters:
 
 -- 错音错字提示
 -- 关闭此 Lua 时，同时需要关闭 translator/spelling_hints，否则 comment 里都是拼音
 corrector = require("corrector")
-
--- v 模式 symbols 优先（全拼）
-v_filter = require("v_filter")
 
 -- 自动大写英文词汇
 autocap_filter = require("autocap_filter")
@@ -37,23 +32,9 @@ autocap_filter = require("autocap_filter")
 -- 降低部分英语单词在候选项的位置，可在方案中配置要降低的模式和单词
 reduce_english_filter = require("reduce_english_filter")
 
+-- 挂接小鹤音形辅码
+aux_code = require("aux_code.aux_code")
 
-
-
--- 默认未启用：
-
--- 长词优先（全拼）
--- 在 engine/filters 增加 - lua_filter@long_word_filter
--- 在方案里写配置项:
--- 提升 count 个词语，插入到第 idx 个位置。
--- 示例：将 2 个词插入到第 4、5 个候选项，输入 jie 得到「1接 2解 3姐 4饥饿 5极恶」
--- long_word_filter:
---   count: 2
---   idx: 4
--- 
--- 使用请注意：之前有较多网友反应有内存泄漏，优化过一些但还是偶尔有较高的内存，但并不卡顿也不影响性能，重新部署后即正常
--- 如果要启用，建议放到靠后位置，最后一个放 uniquifier，倒数第二个就放 long_word_filter
-long_word_filter = require("long_word_filter")
 
 -- 中英混输词条自动空格
 -- 在 engine/filters 增加 - lua_filter@cn_en_spacer
@@ -78,6 +59,3 @@ is_in_user_dict = require("is_in_user_dict")
 -- drop_cand: "Control+d"       # 强制删词, 无视输入的编码
 cold_word_drop_processor = require("cold_word_drop.processor")
 cold_word_drop_filter = require("cold_word_drop.filter")
-
--- 挂接小鹤音形辅码
-aux_code = require("aux_code.aux_code")

@@ -1,7 +1,6 @@
 patch:
   schema_list:
     - {schema: double_pinyin_flypy}
-    - {schema: rime_ice}
   key_binder/bindings/+:
     - { when: composing, accept: Control+h, send: Left }
     - { when: composing, accept: Control+l, send: Right }
