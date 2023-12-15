@@ -1,10 +1,16 @@
 patch:
-  # 辅码
+  # 挂接音形辅码
   engine/filters/+:
     - lua_filter@aux_code@aux_code/flypy_full
   speller/alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
   key_binder/+:
     aux_code_trigger: "`"
 
-  # （按需选择）清空 preedit_format 中的内容，输入时显示双拼编码
+
+  # 反查：两分 | 定义触发键
+  liangfen/prefix: "U"
+  recognizer/patterns/reverse_lookup: "^U[a-z]+$"
+
+
+  # 输入时显示双拼编码
   translator/preedit_format: []

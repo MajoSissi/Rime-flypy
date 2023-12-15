@@ -1,0 +1,3 @@
+patch:
+  liangfen/prefix: "U"
+  recognizer/patterns/reverse_lookup: "^U[a-z]+$"
