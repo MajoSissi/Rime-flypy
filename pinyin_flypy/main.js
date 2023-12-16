@@ -47,8 +47,6 @@ function splitReplaceWords(spell) {
   if (spell.startsWith('nv')) words[0] = 'nv';
   if (spell.endsWith('nv')) words[words.length - 1] = 'nv';
 
-  if (words[0] !== 'heng' && spell.length > 2 && words.length < 2) return [spell];
-
   const result = [];
   for (const word of words) {
     if (word.length <= 2 && !/^[aoe]{1}$/.test(word)) {

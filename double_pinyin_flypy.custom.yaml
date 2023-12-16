@@ -1,4 +1,20 @@
 patch:
+  switches:
+    - name: ascii_mode
+      states: [ 中, Ａ ]
+      reset: 0
+    - name: ascii_punct # 中英标点
+      states: [ ¥, $ ]
+      reset: 0
+    - name: traditionalization
+      states: [ 简, 繁 ]
+      reset: 0
+    - name: emoji
+      states: [ 💀, 😄 ]
+      reset: 0
+    - name: full_shape
+      states: [ 半角, 全角 ]
+      reset: 0
   # 输入时显示双拼编码
   translator/preedit_format: []
 
@@ -8,7 +24,7 @@ patch:
 
 
   # 反查字符定义
-  recognizer/patterns/reverse_lookup: "^[EL][a-z]+$" 
+  recognizer/patterns/reverse_lookup: "^[`L][a-z]+$" 
 
 
   # 音形辅码
@@ -23,6 +39,6 @@ patch:
   "engine/translators/@before 5": reverse_lookup_translator@flypy
   flypy:
     dictionary: flypy
-    prefix: "E"
+    prefix: "`"
     enable_completion: true
 
