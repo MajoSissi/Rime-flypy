@@ -22,7 +22,9 @@ if (dicts.includes(flag)) {
 }
 const result = temp + multiProcess(dicts);
 const { ext, name } = path.parse(dictsPath);
-fs.writeFileSync(`${name}_out${ext}`, result, 'utf8');
+const outName = `${name}_out${ext}`;
+fs.writeFileSync(outName, result, 'utf8');
+console.log(`[INFO] ${outName}`);
 
 function multiProcess(dicts) {
   const dictsList = dicts.trim().split('\n');
