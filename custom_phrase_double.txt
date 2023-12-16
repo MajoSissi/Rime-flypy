@@ -1,6 +1,6 @@
 # Rime table
 # coding: utf-8
-#@/db_name	custom_phrase_double.txt
+#@/db_name	custom_phrase_double
 #@/db_type	tabledb
 #
 # 自定义文本
@@ -21,3 +21,15 @@
 # version: "2023-11-13"
 #
 # 此行之后不能写注释
+
+bilibili	bl
+bilibili	bili
+哔哩哔哩	bl
+哔哩哔哩	bili
+
+github	gb
+github	git	3
+gitlab	git	2
+gitee	git	1
+
+youtube	ytb

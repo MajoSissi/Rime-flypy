@@ -15,16 +15,14 @@ patch:
     - name: full_shape
       states: [ 半角, 全角 ]
       reset: 0
+
+
   # 输入时显示双拼编码
   translator/preedit_format: []
 
 
   # 定义首字上屏字符
   speller/alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
-
-
-  # 反查字符定义
-  recognizer/patterns/reverse_lookup: "^[`L][a-z]+$" 
 
 
   # 音形辅码
@@ -34,11 +32,6 @@ patch:
     aux_code_trigger: "`"
 
 
-  # 音形查字
-  schema/dependencies/@next: flypy
-  "engine/translators/@before 5": reverse_lookup_translator@flypy
-  flypy:
-    dictionary: flypy
-    prefix: "`"
-    enable_completion: true
-
+  # 反查字符定义
+  recognizer/patterns/reverse_lookup: "^`[a-z]+$" 
+  liangfen/prefix: "`"
