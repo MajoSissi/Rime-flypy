@@ -4,3 +4,4 @@ build
 installation.yaml
 user.yaml
 
+node_modules

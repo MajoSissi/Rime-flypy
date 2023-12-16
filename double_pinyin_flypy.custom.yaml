@@ -1,11 +1,28 @@
 patch:
-  # 挂接音形辅码
+  # 输入时显示双拼编码
+  translator/preedit_format: []
+
+
+  # 定义首字上屏字符
+  speller/alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
+
+
+  # 反查字符定义
+  recognizer/patterns/reverse_lookup: "^[EL][a-z]+$" 
+
+
+  # 音形辅码
   engine/filters/+:
     - lua_filter@aux_code@aux_code/flypy_full
-  speller/alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
   key_binder/+:
     aux_code_trigger: "`"
 
 
-  # 输入时显示双拼编码
-  translator/preedit_format: []
+  # 音形查字
+  schema/dependencies/@next: flypy
+  "engine/translators/@before 5": reverse_lookup_translator@flypy
+  flypy:
+    dictionary: flypy
+    prefix: "E"
+    enable_completion: true
+

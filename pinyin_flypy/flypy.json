@@ -1,0 +1,36 @@
+{
+  "initial": {
+    "zh": "v",
+    "ch": "i",
+    "sh": "u"
+  },
+  "final": {
+    "uang": "l",
+    "iang": "l",
+    "iong": "s",
+    "ang": "h",
+    "eng": "g",
+    "ing": "k",
+    "ong": "s",
+    "uan": "r",
+    "uai": "k",
+    "iao": "n",
+    "ian": "m",
+    "ai": "d",
+    "ei": "w",
+    "ui": "v",
+    "ao": "c",
+    "ou": "z",
+    "iu": "q",
+    "ie": "p",
+    "ue": "t",
+    "ve": "t",
+    "an": "j",
+    "en": "f",
+    "in": "b",
+    "un": "y",
+    "uo": "o",
+    "ia": "x",
+    "ua": "x"
+  }
+}
