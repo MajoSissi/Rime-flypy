@@ -208,9 +208,9 @@ function AuxFilter.func(input, env)
                 local shadowComment = cand.comment
                 local originalCand = cand:get_genuine()
                 cand = ShadowCandidate(originalCand, originalCand.type, shadowText,
-                    originalCand.comment .. shadowComment .. '(' .. codeComment .. ')')
+                    originalCand.comment .. shadowComment .. '〔' .. codeComment .. '〕')
             else
-                cand.comment = '(' .. codeComment .. ')'
+                cand.comment = '〔' .. codeComment .. '〕'
             end
         end
 

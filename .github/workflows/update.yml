@@ -26,13 +26,13 @@ jobs:
           cp -rf ./rime-ice-main/opencc .
           rm -rf rime-ice-main rime-ice.zip
 
-      - name: Update rime-lua-aux-code
-        run: |
-          wget -O aux-code.zip https://github.com/HowcanoeWang/rime-lua-aux-code/archive/refs/heads/main.zip
-          unzip aux-code.zip
-          cp -rf ./rime-lua-aux-code-main/lua/aux_code.lua ./lua/aux_code
-          cp -rf ./rime-lua-aux-code-main/lua/flypy_full.txt ./lua/aux_code
-          rm -rf rime-lua-aux-code-main aux-code.zip
+      # - name: Update rime-lua-aux-code
+      #   run: |
+      #     wget -O aux-code.zip https://github.com/HowcanoeWang/rime-lua-aux-code/archive/refs/heads/main.zip
+      #     unzip aux-code.zip
+      #     cp -rf ./rime-lua-aux-code-main/lua/aux_code.lua ./lua/aux_code
+      #     cp -rf ./rime-lua-aux-code-main/lua/flypy_full.txt ./lua/aux_code
+      #     rm -rf rime-lua-aux-code-main aux-code.zip
 
       - name: Push
         run: |
