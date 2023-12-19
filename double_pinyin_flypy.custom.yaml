@@ -7,13 +7,13 @@ patch:
       states: [ ¥, $ ]
       reset: 0
     - name: traditionalization
-      states: [ 简, 繁 ]
+      states: [ 汉, 漢 ]
       reset: 0
     - name: emoji
       states: [ 💀, 😄 ]
       reset: 0
     - name: full_shape
-      states: [ 半角, 全角 ]
+      states: [ 半, 全 ]
       reset: 0
 
 
