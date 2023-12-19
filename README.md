@@ -6,6 +6,11 @@
 
 * /lua/aux_code
 
+#### 字体
+
+* 中文 - [霞鹜文楷](https://github.com/lxgw/LxgwWenKai/releases/tag/v1.315)
+
+
 #### 功能
 
 * 小鹤双拼 
