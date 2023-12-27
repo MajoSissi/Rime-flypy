@@ -3,6 +3,8 @@ const path = require('path');
 const { split } = require('pinyin-split');
 const { spellInfo } = require('cnchar');
 
+let n = 0;
+
 const cmds = process.argv.slice(2);
 if (cmds.length < 1) return console.error('[Error] 参数请带上"词库路径/文件名"!');
 if (!fs.existsSync(cmds[0])) return console.error(`[Error] 文件"${cmds[0]}"不存在!`);
@@ -30,13 +32,14 @@ function multiProcess(dicts) {
   const dictsList = dicts.trim().split('\n');
   const result = [];
   for (const dict of dictsList) {
+    n++;
     result.push(replaceSrc(dict));
   }
   return result.join('\n');
 }
 
 function replaceSrc(input) {
-  let [cn, spell] = input.split('\t');
+  let [cn, spell] = input.split(/\s/i);
   const spellSplice = splitReplaceWords(spell.trim()).join('');
   return cn + '\t' + spellSplice;
 }

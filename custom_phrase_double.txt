@@ -24,6 +24,8 @@
 
 bilibili	bl
 bilibili	bili
+哔哩	bl
+哔哩	bili
 哔哩哔哩	bl
 哔哩哔哩	bili
 

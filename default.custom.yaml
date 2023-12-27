@@ -1,8 +1,12 @@
 patch:
   menu:
     page_size: 3
+
+    
   schema_list:
-    - {schema: double_pinyin_flypy}
+    - { schema: double_pinyin_flypy }
+
+
   key_binder/bindings/+:
     - { when: composing, accept: Control+h, send: Left }
     - { when: composing, accept: Control+l, send: Right }
