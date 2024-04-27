@@ -5,14 +5,14 @@ customization:
   modified_time: "Mon Jan 29 18:03:43 2024"
   rime_version: 1.8.5
 patch:
-  # "key_binder/bindings/+":
-  #   - {accept: "Control+h", send: Left, when: composing}
-  #   - {accept: "Control+l", send: Right, when: composing}
-  #   - {accept: "Control+a", send: Home, when: composing}
-  #   - {accept: "Control+e", send: End, when: composing}
-  #   - {accept: "Control+d", send: Escape, when: composing}
-  #   - {accept: semicolon, send: 2, when: has_menu}
-  #   - {accept: apostrophe, send: 3, when: has_menu}
+  "key_binder/bindings/+":
+    - {accept: "Control+h", send: Left, when: composing}
+    - {accept: "Control+l", send: Right, when: composing}
+    - {accept: "Control+a", send: Home, when: composing}
+    - {accept: "Control+e", send: End, when: composing}
+    - {accept: "Control+d", send: Escape, when: composing}
+    - {accept: semicolon, send: 2, when: has_menu}
+    - {accept: apostrophe, send: 3, when: has_menu}
   menu:
     page_size: 3
   schema_list:
