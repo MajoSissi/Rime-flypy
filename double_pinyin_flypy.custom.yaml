@@ -16,22 +16,25 @@ patch:
       states: [ 半, 全 ]
       reset: 0
 
-
   # 输入时显示双拼编码
   translator/preedit_format: []
 
-
-  # 定义首字上屏字符
+  # 如果不想让什么标点直接上屏，可以加在 alphabet，或者编辑标点符号为两个及以上的映射
   speller/alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
+  # initials 定义仅作为始码的按键，排除 ` 让单个的 ` 可以直接上屏
+  speller/initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
 
+  # 拆字
+  radical_lookup/prefix: "`"  # 反查前缀
+  radical_lookup/tips: "  〔拆〕"
+  recognizer/patterns/radical_lookup: "^`[a-z]+$" 
 
-  # 音形辅码
-  engine/filters/+:
-    - lua_filter@aux_code@aux_code/flypy_full
+  # 小鹤音形辅码
+  # 移除下面
+  # engine/filters:
+  #   - lua_filter@search@radical_pinyin
+  engine/filters/@before last: lua_filter@aux_code@aux_code/flypy_full
   key_binder/+:
     aux_code_trigger: "`"
 
 
-  # 反查字符定义
-  recognizer/patterns/reverse_lookup: "^`[a-z]+$" 
-  liangfen/prefix: "`"
