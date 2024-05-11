@@ -1,0 +1,8 @@
+Log file created at: 2024/05/11 11:53:30
+Running on machine: YBW
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+E20240511 11:53:30.894762 17904 level_db.cc:259] Error opening db 'rime_ice': IO error: D:\Personal\OneDrive\Programm\Rime\rime_ice.userdb/LOCK: 另一个程序正在使用此文件，进程无法访问。
+E20240511 11:53:31.091702 20500 level_db.cc:225] db recovery failed: NotFound: D:\Personal\OneDrive\Programm\Rime\rime_ice.userdb/000001.dbtmp: 系统找不到指定的文件。
+E20240511 11:53:31.136582 20500 level_db.cc:231] attempt to remove opened db 'rime_ice'.
+E20240511 11:53:31.136582 20500 user_db_recovery_task.cc:47] Error removing db file 'D:\Personal\OneDrive\Programm\Rime\rime_ice.userdb'.

@@ -1,0 +1,26 @@
+Log file created at: 2024/05/11 12:19:37
+Running on machine: YBW
+Running duration (h:mm:ss): 0:00:09
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+W20240511 12:19:37.773274  7424 config_data.cc:69] nonexistent config file 'D:\Personal\OneDrive\Programm\Rime\symbols_caps_v.custom.yaml'.
+W20240511 12:19:38.473475  7424 config_compiler.cc:527] circular dependencies detected in melt_eng.schema:
+W20240511 12:19:38.473475  7424 config_compiler.cc:367] accessing blocking node with unresolved dependencies: melt_eng.schema:
+W20240511 12:19:38.474472  7424 config_compiler.cc:527] circular dependencies detected in melt_eng.schema:
+W20240511 12:19:38.474472  7424 config_compiler.cc:367] accessing blocking node with unresolved dependencies: melt_eng.schema:
+W20240511 12:19:38.474472  7424 config_compiler.cc:527] circular dependencies detected in melt_eng.schema:
+W20240511 12:19:38.474472  7424 config_compiler.cc:367] accessing blocking node with unresolved dependencies: melt_eng.schema:
+W20240511 12:19:38.474472  7424 config_compiler.cc:527] circular dependencies detected in melt_eng.schema:
+W20240511 12:19:38.474472  7424 config_compiler.cc:367] accessing blocking node with unresolved dependencies: melt_eng.schema:
+W20240511 12:19:38.474472  7424 config_compiler.cc:527] circular dependencies detected in melt_eng.schema:
+W20240511 12:19:38.474472  7424 config_compiler.cc:367] accessing blocking node with unresolved dependencies: melt_eng.schema:
+W20240511 12:19:38.474472  7424 config_compiler.cc:527] circular dependencies detected in melt_eng.schema:
+W20240511 12:19:38.474472  7424 config_compiler.cc:367] accessing blocking node with unresolved dependencies: melt_eng.schema:
+W20240511 12:19:38.474472  7424 config_compiler.cc:527] circular dependencies detected in melt_eng.schema:
+W20240511 12:19:38.474472  7424 config_compiler.cc:367] accessing blocking node with unresolved dependencies: melt_eng.schema:
+W20240511 12:19:38.474472  7424 config_compiler.cc:527] circular dependencies detected in melt_eng.schema:
+W20240511 12:19:38.474472  7424 config_compiler.cc:367] accessing blocking node with unresolved dependencies: melt_eng.schema:
+W20240511 12:19:38.474472  7424 config_data.cc:69] nonexistent config file 'D:\Personal\OneDrive\Programm\Rime\melt_eng.custom.yaml'.
+W20240511 12:19:46.043412  7424 config_compiler.cc:527] circular dependencies detected in radical_pinyin.schema:
+W20240511 12:19:46.043412  7424 config_compiler.cc:367] accessing blocking node with unresolved dependencies: radical_pinyin.schema:
+W20240511 12:19:46.043412  7424 config_data.cc:69] nonexistent config file 'D:\Personal\OneDrive\Programm\Rime\radical_pinyin.custom.yaml'.
+E20240511 12:19:47.418922  7424 config_data.cc:77] Error parsing YAML: yaml-cpp: error at line 13, column 14: illegal map value

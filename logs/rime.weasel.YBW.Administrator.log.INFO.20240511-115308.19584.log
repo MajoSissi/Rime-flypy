@@ -1,0 +1,53 @@
+Log file created at: 2024/05/11 11:53:08
+Running on machine: YBW
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I20240511 11:53:08.452289 21600 core_module.cc:20] registering core components.
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: config_builder
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: config
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: schema
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: user_config
+I20240511 11:53:08.455282 21600 dict_module.cc:25] registering components from module 'dict'.
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: tabledb
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: stabledb
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: plain_userdb
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: userdb
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: corrector
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: dictionary
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: reverse_lookup_dictionary
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: user_dictionary
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: userdb_recovery_task
+I20240511 11:53:08.455282 21600 gears_module.cc:42] registering components from module 'gears'.
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: ascii_composer
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: chord_composer
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: express_editor
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: fluid_editor
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: fluency_editor
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: key_binder
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: navigator
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: punctuator
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: recognizer
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: selector
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: speller
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: shape_processor
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: abc_segmentor
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: affix_segmentor
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: ascii_segmentor
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: matcher
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: punct_segmentor
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: fallback_segmentor
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: echo_translator
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: punct_translator
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: table_translator
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: script_translator
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: r10n_translator
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: reverse_lookup_translator
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: schema_list_translator
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: switch_translator
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: history_translator
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: simplifier
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: uniquifier
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: charset_filter
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: cjk_minifier
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component: reverse_lookup_filter
+I20240511 11:53:08.455282 21600 registry.cc:14] registering component
