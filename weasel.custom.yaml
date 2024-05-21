@@ -7,11 +7,9 @@ patch:
     font_point: 14
     label_font_point: 14
     comment_font_point: 14
-
-    inline_preedit: false
-
     label_format: "%s."
     horizontal: false
+    vertical_auto_reverse: false
 
   app_options:
     code.exe: {ascii_mode: true}

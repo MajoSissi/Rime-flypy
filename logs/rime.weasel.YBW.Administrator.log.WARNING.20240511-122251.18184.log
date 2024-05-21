@@ -1,8 +1,0 @@
-Log file created at: 2024/05/11 12:22:51
-Running on machine: YBW
-Running duration (h:mm:ss): 0:00:00
-Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
-W20240511 12:22:51.850860  9016 config_data.cc:69] nonexistent config file 'D:\Personal\OneDrive\Programm\Rime\symbols_caps_v.custom.yaml'.
-W20240511 12:22:52.653399  9016 config_compiler.cc:527] circular dependencies detected in radical_pinyin.schema:
-W20240511 12:22:52.653399  9016 config_compiler.cc:367] accessing blocking node with unresolved dependencies: radical_pinyin.schema:
-W20240511 12:22:52.653399  9016 config_data.cc:69] nonexistent config file 'D:\Personal\OneDrive\Programm\Rime\radical_pinyin.custom.yaml'.
