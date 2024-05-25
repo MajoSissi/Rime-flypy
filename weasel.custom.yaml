@@ -12,6 +12,9 @@ patch:
     vertical_auto_reverse: false
 
   app_options:
-    code.exe: {ascii_mode: true}
-    sublime_text.exe: {ascii_mode: true}
-    windowsterminal.exe: {ascii_mode: true}
+    en: &en {ascii_mode: true}
+    code.exe: *en
+    sublime_text.exe: *en
+    windowsterminal.exe: *en
+    anydesk.exe: *en
+    todesk.exe: *en
