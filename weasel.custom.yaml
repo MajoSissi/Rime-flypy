@@ -10,11 +10,16 @@ patch:
     label_format: "%s."
     horizontal: false
     vertical_auto_reverse: false
+    
+  style/layout/+:
+    shadow_radius: 0
 
   app_options:
     en: &en {ascii_mode: true}
     code.exe: *en
     sublime_text.exe: *en
     windowsterminal.exe: *en
+    dandanplay.exe: *en
     anydesk.exe: *en
     todesk.exe: *en
+    rustdesk.exe: *en
