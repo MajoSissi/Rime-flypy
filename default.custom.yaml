@@ -1,19 +1,19 @@
-customization:
-  distribution_code_name: Weasel
-  distribution_version: 0.15.0.0
-  generator: "Rime::SwitcherSettings"
-  modified_time: "Mon Jan 29 18:03:43 2024"
-  rime_version: 1.8.5
 patch:
   "key_binder/bindings/+":
-    - {accept: "Control+h", send: Left, when: composing}
-    - {accept: "Control+l", send: Right, when: composing}
-    - {accept: "Control+a", send: Home, when: composing}
-    - {accept: "Control+e", send: End, when: composing}
-    - {accept: "Control+d", send: Escape, when: composing}
-    - {accept: semicolon, send: 2, when: has_menu}
-    - {accept: apostrophe, send: 3, when: has_menu}
+    - { when: composing, send: Left, accept: Control+h }
+    - { when: composing, send: Right, accept: Control+l }
+    - { when: composing, send: Home, accept: Control+a }
+    - { when: composing, send: End, accept: Control+e }
+    - { when: composing, send: Escape, accept: Control+d }
+    - { when: has_menu, send: 2, accept: semicolon }
+    - { when: has_menu, send: 3, accept: apostrophe }
+
+    - { when: always, select: .next, accept: Control+Shift+1 }
+    - { when: always, select: .next, accept: Control+Shift+exclam } 
+
   menu:
     page_size: 3
+
   schema_list:
-    - {schema: double_pinyin_flypy}
+    - { schema: double_pinyin_flypy }
+    - { schema: radical_pinyin }

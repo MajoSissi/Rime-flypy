@@ -25,7 +25,7 @@ schema:
     https://github.com/iDvel/rime-ice
   dependencies:
     - melt_eng        # 英文输入，作为次翻译器挂载到拼音方案
-    - radical_pinyin  # 部件拆字，反查及辅码
+    # - radical_pinyin  # 部件拆字，反查及辅码
 
 
 # 开关
@@ -65,7 +65,7 @@ engine:
     - ascii_segmentor
     - matcher
     - abc_segmentor
-    - affix_segmentor@radical_lookup  # 部件拆字自定义 tag
+    # - affix_segmentor@radical_lookup  # 部件拆字自定义 tag
     - punct_segmentor
     - fallback_segmentor
   translators:
@@ -76,13 +76,13 @@ engine:
     - table_translator@custom_phrase    # 自定义短语 custom_phrase_double.txt
     - table_translator@melt_eng         # 英文输入
     - table_translator@cn_en            # 中英混合词汇
-    - table_translator@radical_lookup   # 部件拆字反查
+    # - table_translator@radical_lookup   # 部件拆字反查
     - lua_translator@unicode            # Unicode
     - lua_translator@number_translator  # 数字、金额大写
     - lua_translator@force_gc           # 暴力 GC
   filters:
     - lua_filter@corrector                          # 错音错字提示
-    - reverse_lookup_filter@radical_reverse_lookup  # 部件拆字滤镜
+    # - reverse_lookup_filter@radical_reverse_lookup  # 部件拆字滤镜
     - lua_filter@autocap_filter                     # 英文自动大写
     - lua_filter@pin_cand_filter                    # 置顶候选项（顺序要求：置顶候选项 > Emoji > 简繁切换）
     - lua_filter@reduce_english_filter              # 降低部分英语单词在候选项的位置
@@ -124,27 +124,7 @@ reduce_english_filter:
   mode: custom  # all | custom | none
   idx: 2        # 降低到第 idx 个位置
   # 自定义的单词列表，示例列表没有降低部分常用单词，如 and cat mail Mac but bad shit ……
-  words: [
-    aid, ann,
-    bail, bait, bam, band, bans, bat, bay, bend, bent, benz, bib, bid, bien, biz, boc, bop, bos, bud, buf, bach, bench, bush,
-    cab, cad, cain, cam, cans, cap, cas, cef, chad, chan, chap, chef, cher, chew, chic, chin, chip, chit, coup, cum, cunt, cur, couch,
-    dab, dag, dal, dam, dent, dew, dial, diet, dim, din, dip, dis, dit, doug, dub, dug, dunn,
-    fab, fax, fob, fog, foul, fur,
-    gag, gail, gain, gal, gam, gaol, ged, gel, ger, guam, gus, gut,
-    hail, ham, hank, hans, hat, hay, heil, heir, hem, hep, hud, hum, hung, hunk, hut, hush,
-    jim, jug,
-    kat,
-    lab, lad, lag, laid, lam, laos, lap, lat, lax, lay, led, leg, lex, liam, lib, lid, lied, lien, lies, linn, lip, lit, liz, lob, lug, lund, lung, lux, lash, loch, lush,
-    mag, maid, mann, mar, mat, med, mel, mend, mens, ment, mil, mins, mint, mob, moc, mop, mos, mot, mud, mug, mum, mesh,
-    nap, nat, nay, neil, nib, nip, noun, nous, nun, nut, nail, nash,
-    pac, paid, pail, pain, pair, pak, pal, pam, pans, pant, pap, par, pat, paw, pax, pens, pic, pier, pies, pins, pint, pit, pix, pod, pop, pos, pot, pour, pow, pub, pinch, pouch,
-    rand, rant, rent, rep, res, ret, rex, rib, rid, rig, rim, rub, rug, rum, runc, runs, ranch,
-    sac, sail, sal, sam, sans, sap, saw, sax, sew, sham, shaw, shin, sig, sin, sip, sis, suit, sung, suns, sup, sur, sus,
-    tad, tail, taj, tar, tax, tec, ted, tel, ter, tex, tic, tied, tier, ties, tim, tin, tit, tour, tout, tum,
-    wag, wand, womens, wap, wax, weir, won,
-    yan, yen,
-    zach
-  ]
+  words: ['']
 
 
 # Lua 配置: 置顶候选项
@@ -261,24 +241,24 @@ punctuator:
     __include: symbols_caps_v:/symbols         # 从 symbols_caps_v.yaml 导入配置
 
 
-# 部件拆字反查
-radical_lookup:
-  tag: radical_lookup
-  dictionary: radical_pinyin
-  enable_user_dict: false
-  prefix: "uU"  # 反查前缀（反查时前缀会消失影响打英文所以设定为两个字母，或可改成一个非字母符号），与 recognizer/patterns/radical_lookup 匹配
-  tips: "  〔拆字〕"
-  comment_format:
-    - erase/^.*$//
-# 部件拆字滤镜
-radical_reverse_lookup:
-  tags: [ radical_lookup ]
-  # dictionary 为拼音标注来源。目前是显示本方案词库的注音，可去部件拆字方案下载更全的、带声调的、已编译好的词典
-  # https://github.com/mirtlecn/rime-radical-pinyin?tab=readme-ov-file#%E5%8F%8D%E6%9F%A5%E5%B8%A6%E5%A3%B0%E8%B0%83%E6%B3%A8%E9%9F%B3
-  dictionary: rime_ice
-  # comment_format:     # 自定义 comment，例如在左右加上括号
-  #  - xform/^/(/
-  #  - xform/$/)/
+# # 部件拆字反查
+# radical_lookup:
+#   tag: radical_lookup
+#   dictionary: radical_pinyin
+#   enable_user_dict: false
+#   prefix: "uU"  # 反查前缀（反查时前缀会消失影响打英文所以设定为两个字母，或可改成一个非字母符号），与 recognizer/patterns/radical_lookup 匹配
+#   tips: "  〔拆字〕"
+#   comment_format:
+#     - erase/^.*$//
+# # 部件拆字滤镜
+# radical_reverse_lookup:
+#   tags: [ radical_lookup ]
+#   # dictionary 为拼音标注来源。目前是显示本方案词库的注音，可去部件拆字方案下载更全的、带声调的、已编译好的词典
+#   # https://github.com/mirtlecn/rime-radical-pinyin?tab=readme-ov-file#%E5%8F%8D%E6%9F%A5%E5%B8%A6%E5%A3%B0%E8%B0%83%E6%B3%A8%E9%9F%B3
+#   dictionary: rime_ice
+#   # comment_format:     # 自定义 comment，例如在左右加上括号
+#   #  - xform/^/(/
+#   #  - xform/$/)/
 
 
 # 处理符合特定规则的输入码，如网址、反查
@@ -287,7 +267,7 @@ recognizer:
   import_preset: default  # 从 default.yaml 继承通用的
   patterns:  # 再增加方案专有的：
     punct: "^V([0-9]|10|[A-Za-z]+)$"    # 响应 symbols_caps_v.yaml 的 symbols
-    radical_lookup: "^uU[a-z]+$"        # 响应部件拆字的反查，与 radical_lookup/prefix 匹配
+    # radical_lookup: "^uU[a-z]+$"        # 响应部件拆字的反查，与 radical_lookup/prefix 匹配
     unicode: "^U[a-f0-9]+"              # 脚本将自动获取第 2 个字符 U 作为触发前缀，响应 lua_translator@unicode，输出 Unicode 字符
     number: "^R[0-9]+[.]?[0-9]*"        # 脚本将自动获取第 2 个字符 R 作为触发前缀，响应 lua_translator@number_translator，数字金额大写
     gregorian_to_lunar: "^N[0-9]{1,8}"  # 脚本将自动获取第 2 个字符 N 作为触发前缀，响应 lua_translator@lunar，公历转农历，输入 N20240115 得到「二〇二三年腊月初五」

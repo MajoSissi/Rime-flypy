@@ -1,16 +1,15 @@
 patch:
   switches:
     - name: ascii_mode
-      states: [ 中, Ａ ]
-      reset: 0
-    - name: ascii_punct # 中英标点
-      states: [ ¥, $ ]
       reset: 0
     - name: traditionalization
       states: [ 汉, 漢 ]
       reset: 0
     - name: emoji
       states: [ 💀, 😄 ]
+      reset: 0
+    - name: ascii_punct # 中英标点
+      states: [ ¥, $ ]
       reset: 0
     - name: full_shape
       states: [ 半, 全 ]
@@ -24,15 +23,9 @@ patch:
   # initials 定义仅作为始码的按键，排除 ` 让单个的 ` 可以直接上屏
   speller/initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
 
-  # 拆字
-  radical_lookup/prefix: "`"  # 反查前缀
-  radical_lookup/tips: "  〔拆〕"
-  recognizer/patterns/radical_lookup: "^`[a-z]+$" 
-
-  # 小鹤音形辅码
-  # 移除下面
-  # engine/filters:
-  #   - lua_filter@search@radical_pinyin
+  # 小鹤音形
   engine/filters/@before last: lua_filter@aux_code@aux_code/flypy_full
   key_binder/+:
     aux_code_trigger: "`"
+
+  # 移除所有 radical 和 部件拆字
