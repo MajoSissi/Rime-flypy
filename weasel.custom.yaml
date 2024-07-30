@@ -17,6 +17,7 @@ patch:
   app_options:
     en: &en {ascii_mode: true}
     code.exe: *en
+    java.exe: *en
     sublime_text.exe: *en
     windowsterminal.exe: *en
     dandanplay.exe: *en
